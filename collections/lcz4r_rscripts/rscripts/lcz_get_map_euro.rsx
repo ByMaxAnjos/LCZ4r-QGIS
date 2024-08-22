@@ -2,17 +2,26 @@
 ##Obtain LCZ map from Europe=display_name
 ##dont_load_any_packages
 ##pass_filenames
-##City=String
+##City=optional String
 ##ROI=optional vector
 ##Output=output raster
 ##ByMaxAnjos/LCZ4r=github_install
 
 library(LCZ4r)
 library(terra)
-Output=lcz_get_map_euro(city=City, roi = ROI)
+library(sf)
 
-#' City: A character string specifying the name of your target european city or area based on the <a href='https://nominatim.openstreetmap.org/ui/search.html'>OpenStreetMap project.</a> 
-#' ROI: Optionally, you can provide a Region of Interest (ROI) in ESRI shapefile format to clip the LCZ map to a custom area.
+my_roi <- ROI
+
+if(City != "") {
+Output=lcz_get_map_euro(city=City)
+} else { 
+Output=lcz_get_map_euro(city=NULL, roi = my_roi)
+}
+
+
+#' City: A character string specifying the name of your target european city or area based on the <a href='https://nominatim.openstreetmap.org/ui/search.html'>OpenStreetMap project.</a></p><p> City [opitonal] = Berlin  
+#' ROI: Optionally, you can provide a Region of Interest (ROI) in ESRI shapefile format (or .gpkg) to clip the LCZ map to a custom area.
 #' Output: A raster TIFF file containing LCZ classes (100 m resolution).
 #' ALG_DESC: Obtain your LCZ map from the European LCZ map. It allows you to obtain the LCZ map for a specific area of interest, which can be a city, state, region, or custom-defined shape.</p><p>
 #'         :For more information, visit: <a href='https://bymaxanjos.github.io/LCZ4r/articles/Introd_general_LCZ4r.html'>LCZ general functions</a> 
