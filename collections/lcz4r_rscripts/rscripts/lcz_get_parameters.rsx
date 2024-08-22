@@ -15,7 +15,7 @@ library(terra)
 if (iStack) {
   Output_raster <- lcz_get_parameters(LCZ_map, iselect = " ", istack = iStack)
 } else {
- Output_raster <- lcz_get_parameters(LCZ_map, iselect = Select_param, istack = iStack)
+ Output_raster <- lcz_get_parameters(LCZ_map, iselect = Select_parameter, istack = iStack)
 }
 
 #' LCZ_map: A SpatRaster object containing the LCZ map derived from Obtain LCZ map* functions
