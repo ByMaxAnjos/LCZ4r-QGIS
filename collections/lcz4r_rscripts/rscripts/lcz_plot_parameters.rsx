@@ -3,7 +3,7 @@
 ##dont_load_any_packages
 ##pass_filenames
 ##LCZ_map_parameter=raster
-##Select_parameter=optional enum literal multiple SVF1;SVF2;SVF3;AR1;AR2;AR3;BSF1;BSF2;BSF3;ISF1;ISF2;ISF3;PSF1;PSF2;PSF3;TSF1;TSF2;TSF3;HRE1;HRE2;HRE3;TRC1;TRC2;TRC3;SAD1;SAD2;SAD3;SAL1;SAL2;SAL3;AH1;AH2;AH3;z0
+##Select_parameter=optional enum literal SVF1;SVF2;SVF3;AR1;AR2;AR3;BSF1;BSF2;BSF3;ISF1;ISF2;ISF3;PSF1;PSF2;PSF3;TSF1;TSF2;TSF3;HRE1;HRE2;HRE3;TRC1;TRC2;TRC3;SAD1;SAD2;SAD3;SAL1;SAL2;SAL3;AH1;AH2;AH3;z0
 ##Subtitle=string My City
 ##Caption=string Source:LCZ4r,  2024.
 ##Height=number 7
@@ -16,7 +16,7 @@ library(LCZ4r)
 library(ggplot2)
 
 # Generate and plot the LCZ map
-plot_lcz <-lcz_plot_parameters(LCZ_map_parameter, iselect = Select_param, subtitle=Subtitle, caption = Caption, inclusive=inclusive)
+plot_lcz=lcz_plot_parameters(LCZ_map_parameter, iselect = Select_parameter, subtitle=Subtitle, caption = Caption, inclusive=inclusive)
 ggsave(Output, plot_lcz, height = Height, width = Width, dpi=dpi)
 
 #' LCZ_map:The SpatRaster in a stack format from Retrieve LCZ parameter function.
