@@ -4,11 +4,10 @@
 ##LCZ_map=raster
 ##Title=string Local Climate Zones
 ##Subtitle=string My City
-##Caption=string Source: LCZ4r,  2024.
+##Caption=string Source: LCZ4r, 2024.
 ##xlab=string LCZ code
 ##ylab=string Area [square kilometer]
 ##dpi=number 300
-##inclusive=boolean FALSE
 ##iPlot=boolean TRUE
 ##Output=output File
 
@@ -25,11 +24,10 @@ if (iPlot) {
     write.csv(tbl_lcz, Output, row.names = FALSE)
 }
 
-#' LCZ_map: A SpatRaster object containing the LCZ map derived from Obtain LCZ map from* functions
-#' inclusive: Logical. Set to TRUE to use a colorblind-friendly palette.
-#' iPlot: Set to TRUE to save a plot into your PC; otherwise,  save a data frame (table.csv). Remember to link with Outputs (e.g., .jpeg for plot and .csv for table). 
-#' Output:1. If iPlot is TRUE, specifies file extension: PNG (.png), JPG (.jpg .jpeg), TIF (.tif), PDF (*.pdf). Example: <b>/Users/myPC/Documents/lcz_ts.jpeg</b>;</p><p>
-#'       :2. if iPlot is FALSE, specifies file extension: table (.csv). Example: <b>/Users/myPC/Documents/lcz_ts.csv</b>
+#' LCZ_map: A SpatRaster object containing the LCZ map derived from Obtain LCZ map* functions
+#' iPlot: Set to TRUE to save a plot into your PC; otherwise,  save a data frame (table.csv). Remember to link with Outputs (.jpeg for plot and .csv for table). 
+#' Output:1. If iPlot is TRUE, specifies file extension: PNG (.png), JPG (.jpg .jpeg), TIF (.tif), PDF (*.pdf), SVG (*.svg) Example: <b>/Users/myPC/Documents/name_lcz_area.jpeg</b>;</p><p>
+#'       :2. if iPlot is FALSE, specifies file extension: table (.csv). Example: <b>/Users/myPC/Documents/name_lcz_area.csv</b>
 #' ALG_DESC: This function calculates the areas of LCZ classes in both percentage and square kilometers.</p><p>
 #'         :For more information, visit: <a href='https://bymaxanjos.github.io/LCZ4r/articles/Introd_general_LCZ4r.html'>LCZ general functions</a> 
 #' ALG_CREATOR:<a href='https://github.com/ByMaxAnjos'>Max Anjos</a> 
