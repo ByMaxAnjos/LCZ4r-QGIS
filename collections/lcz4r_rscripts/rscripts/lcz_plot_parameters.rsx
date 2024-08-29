@@ -9,20 +9,18 @@
 ##Height=number 7
 ##Width=number 10
 ##dpi=number 600
-##inclusive=boolean FALSE
 ##Output=output File
 
 library(LCZ4r)
 library(ggplot2)
 
-# Generate and plot the LCZ map
-plot_lcz=lcz_plot_parameters(LCZ_map_parameter, iselect = Select_parameter, subtitle=Subtitle, caption = Caption, inclusive=inclusive)
+plot_lcz=lcz_plot_parameters(LCZ_map_parameter, iselect = Select_parameter, subtitle=Subtitle, caption = Caption)
 ggsave(Output, plot_lcz, height = Height, width = Width, dpi=dpi)
 
 #' LCZ_map:The SpatRaster in a stack format from Retrieve LCZ parameter function.
 #' Select_parameter: Specify one single parameter name based on raster parameter map. 
-#' inclusive: Logical. Set to TRUE to use a colorblind-friendly palette.
-#' Output: Specifies file extensions: PNG (*.png), JPG (*.jpg *.jpeg), TIF (*.tif), PDF (*.pdf).
+#' Output: Specifies file extensions: PNG (*.png), JPG (*.jpg *.jpeg), TIF (*.tif), PDF (*.pdf), SVG (*.svg).</p><p>
+#'       :Example: <b>/Users/myPC/Documents/name_lcz_par.jpeg</b>
 #' ALG_DESC: This function generates a graphical representation of a Local Climate Zone (LCZ) map provided as a SpatRaster object.</p><p>
 #'         :For more information, visit: <a href='https://bymaxanjos.github.io/LCZ4r/articles/Introd_general_LCZ4r.html'>LCZ general functions</a> 
 #' ALG_CREATOR:<a href='https://github.com/ByMaxAnjos'>Max Anjos</a> 
