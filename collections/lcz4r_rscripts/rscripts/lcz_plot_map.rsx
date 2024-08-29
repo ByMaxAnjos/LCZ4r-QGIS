@@ -5,7 +5,7 @@
 ##LCZ_map=raster
 ##Title=string Local Climate Zones
 ##Subtitle=string My City
-##Caption=string Source:LCZ4r,  2024.
+##Caption=string Source: LCZ4r, 2024.
 ##Height=number 7
 ##Width=number 10
 ##dpi=number 300
@@ -19,9 +19,10 @@ library(ggplot2)
 plot_lcz<-lcz_plot_map(LCZ_map, title = Title, subtitle=Subtitle, caption = Caption, inclusive=inclusive)
 ggsave(Output, plot_lcz, height = Height, width = Width, dpi=dpi)
 
-#' LCZ_map: A SpatRaster object containing the LCZ map derived from lcz_get_map* functions
+#' LCZ_map: A SpatRaster object containing the LCZ map derived from Obtain LCZ map* functions
 #' inclusive: Logical. Set to TRUE to use a colorblind-friendly palette.
-#' Output: Specifies file extensions: PNG (*.png), JPG (*.jpg *.jpeg), TIF (*.tif), PDF (*.pdf).
+#' Output: Specifies file extensions: PNG (*.png), JPG (*.jpg *.jpeg), TIF (*.tif), PDF (*.pdf), SVG (*.svg).</p><p>
+#'       : Example: <b>/Users/myPC/Documents/name_lcz_map.jpeg</b>
 #' ALG_DESC: This function generates a graphical representation of a Local Climate Zone (LCZ) map provided as a SpatRaster object.</p><p>
 #'         :For more information, visit: <a href='https://bymaxanjos.github.io/LCZ4r/articles/Introd_general_LCZ4r.html'>LCZ general functions</a> 
 #' ALG_CREATOR:<a href='https://github.com/ByMaxAnjos'>Max Anjos</a> 
