@@ -20,7 +20,7 @@ Output=lcz_get_map_euro(city=NULL, roi = my_roi)
 }
 
 
-#' City: A character string specifying the name of your target european city or area based on the <a href='https://nominatim.openstreetmap.org/ui/search.html'>OpenStreetMap project.</a></p><p> City [opitonal] = Berlin  
+#' City: A character string specifying the name of your target european city or area based on the <a href='https://nominatim.openstreetmap.org/ui/search.html'>OpenStreetMap project.</a></p><p> City [opitonal] = <b>Berlin</b>  
 #' ROI: Optionally, you can provide a Region of Interest (ROI) in ESRI shapefile format (or .gpkg) to clip the LCZ map to a custom area.
 #' Output: A raster TIFF file containing LCZ classes (100 m resolution).
 #' ALG_DESC: Obtain your LCZ map from the European LCZ map. It allows you to obtain the LCZ map for a specific area of interest, which can be a city, state, region, or custom-defined shape.</p><p>
